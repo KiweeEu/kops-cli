@@ -1,6 +1,6 @@
 # kiweeteam/kops
 FROM ubuntu:22.04
-ARG KOPS_VERSION=1.26.2
+ARG KOPS_VERSION=1.26.4
 RUN apt update && apt install -y curl openssh-client
 RUN if [ "$(uname -m)" = "aarch64" ]; then \
       curl -sfL https://github.com/kubernetes/kops/releases/download/v${KOPS_VERSION}/kops-linux-arm64 -o /tmp/kops; \
